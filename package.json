@@ -1,0 +1,39 @@
+{
+    "name": "alsf",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "test": "vitest",
+        "regen-test-data": "ts-node ./scripts/regen.ts",
+        "build": "tsup ./src",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+        "format": "prettier --write src/"
+    },
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "package.json"
+    ],
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.14.10",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.1.0",
+        "typescript": "^5.5.3",
+        "vitest": "^1.6.0"
+    },
+    "dependencies": {
+        "iso-639-2": "^3.0.2"
+    }
+}
